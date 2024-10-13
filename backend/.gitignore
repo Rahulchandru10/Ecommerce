@@ -1,2 +1,2 @@
 Firebase.js
-db.js
+config/db.js
