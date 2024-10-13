@@ -58,7 +58,7 @@ const Login = () => {
     return (
         <div className="login">
             <h2>Login</h2>
-            <div style={{ width: "320px" }}>
+            <div style={{ width: "360px" }}>
                 {alert && <Loginalert message={alert.message} type={alert.type} />}
             </div>
             <form onSubmit={handleSubmit}>

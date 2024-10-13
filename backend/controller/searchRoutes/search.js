@@ -4,7 +4,7 @@ const { Client } = require('@elastic/elasticsearch');
 
 const router = express.Router();
 const esClient = new Client({
-  node: 'http://host.docker.internal:9200',
+  node: 'http://localhost:9200',
   auth: {
     username: 'elastic',
     password: 'I2JlkRf89-Wz5=uz0QI7'

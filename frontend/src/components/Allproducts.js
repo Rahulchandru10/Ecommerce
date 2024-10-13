@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-
+import Button from 'react-bootstrap/esm/Button';
 const Allproducts = () => {
     const [products, setProducts] = useState([]);
     const [active, setActive] = useState(1);
@@ -117,6 +117,9 @@ const Allproducts = () => {
                                     <div>Description: {product.description}</div>
                                     <div>Stocks left: {product.stock}</div>
                                 </Card.Text>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                        <Button variant="primary">Buy Now</Button>
+                                    </div>
                             </Card.Body>
                         </Card>
                     </Col>

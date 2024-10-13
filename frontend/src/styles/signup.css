@@ -1,7 +1,7 @@
-.signup{
+/* .signup{
     margin-left: 36%;
     margin-top: 13%;
-}
+}*/
 div{
     margin-bottom: 2%;
 }
@@ -13,4 +13,60 @@ button{
 }
 body{
     background-color:azure;
+    font-family: 'Times New Roman', Times, serif;
 }
+ .signup {
+    margin: 5% auto;
+    margin-top: 8%;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.signup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup div {
+    margin-bottom: 15px;
+}
+
+.signup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.signup input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.signup button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup .btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.signup .btn-success:hover {
+    background-color: #218838;
+}
+

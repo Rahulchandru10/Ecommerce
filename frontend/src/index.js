@@ -7,7 +7,7 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import Toys from './components/Toys';
 import Electronics from './components/Electronics';
-import Shirts from './components/Signup';
+import Shirts from './components/Shirts';
 import Homeappliances from './components/Homeappliances';
 import Gadgets from './components/Gadgets';
 import Personalcare from './components/Personalcare';
