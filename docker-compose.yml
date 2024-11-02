@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      DB_HOST: db  
+      DB_USER: root                     
+      DB_PASSWORD: Rohit@45             
+      DB_DATABASE: ecommerce            
+      DB_PORT: 3306                     
+    depends_on:
+      - db
+    ports:
+      - "3001:3001"                     
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"                     
+    volumes:
+      - ./frontend:/usr/src/app
+
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Rohit@45     
+      MYSQL_DATABASE: ecommerce         
+    ports:
+      - "3308:3306"                    
+    volumes:
+      - mysql_data:/var/lib/mysql       
+      - ./sql.sql:/docker-entrypoint-initdb.d/init.sql
+      
+  elasticsearch:
+    image: elasticsearch:8.5.1  
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9201:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+volumes:
+  mysql_data:                           
+  esdata:  
